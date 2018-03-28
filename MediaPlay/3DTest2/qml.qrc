@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>3DStudiofile/models/vehicle/meshes/Vehicle.mesh</file>
+        <file>3DStudiofile/models/vehicle/vehicle.import</file>
+        <file>3DStudiofile/3DStudiofile.uia</file>
+        <file>3DStudiofile/3DStudiofile.uip</file>
+        <file>main.cpp</file>
+        <file>3DStudiofile/models/wheel/meshes/wheel.mesh</file>
+        <file>3DStudiofile/models/wheel/wheel.import</file>
+        <file>IMG_2642.JPG</file>
+    </qresource>
+</RCC>

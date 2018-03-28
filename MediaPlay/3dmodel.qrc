@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/3Dstudio">
+        <file>3DModel.qml</file>
+    </qresource>
+    <qresource prefix="/StudioFile">
+        <file>3DStudiofile/3DStudiofile.uip</file>
+        <file>3DStudiofile/3DStudiofile.uia</file>
+        <file>3DStudiofile/models/vehicle/meshes/Vehicle.mesh</file>
+        <file>3DStudiofile/models/vehicle/vehicle.import</file>
+        <file>3DStudiofile/models/wheel/meshes/wheel.mesh</file>
+        <file>3DStudiofile/models/wheel/wheel.import</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>ModelUI.qml</file>
+        <file>ModelUIForm.ui.qml</file>
+    </qresource>
+</RCC>

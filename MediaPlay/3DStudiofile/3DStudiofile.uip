@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<UIP version="3" >
+	<Project >
+		<ProjectSettings author="" company="" presentationWidth="800" presentationHeight="480" maintainAspect="False" >
+			<CustomColors count="16" >#ff5500 #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff</CustomColors>
+		</ProjectSettings>
+		<Graph >
+			<Scene id="Scene" backgroundcolor="0.333333 0.666667 1" >
+				<Layer id="Layer" >
+					<Camera id="Camera" />
+					<Light id="Light" />
+					<Model id="Vehicle" >
+						<Material id="Default" name="Default" />
+					</Model>
+					<Light id="Light2" />
+					<Light id="Light3" />
+					<Model id="Vehicle_001" >
+						<Material id="Default_001" name="Default" />
+					</Model>
+					<Light id="Light2_001" />
+					<Light id="Light3_001" />
+					<Camera id="Camera2" />
+					<Model id="Vehicle_002" >
+						<Material id="Default_002" name="Default" />
+					</Model>
+					<Light id="Light2_002" />
+					<Light id="Light3_002" />
+					<Camera id="Camera2_001" />
+					<Camera id="Camera3" />
+					<Model id="Vehicle_003" >
+						<Material id="Default_003" name="Default" />
+					</Model>
+					<Light id="Light2_003" />
+					<Light id="Light3_003" />
+					<Camera id="Camera2_002" />
+					<Camera id="Camera3_001" />
+					<Camera id="Camera4" />
+					<Light id="Light4" />
+					<Model id="wheel" >
+						<Material id="Default_004" name="Default" />
+					</Model>
+				</Layer>
+			</Scene>
+		</Graph>
+		<Logic >
+			<State name="Master Slide" component="#Scene" >
+				<Add ref="#Layer" />
+				<Add ref="#Camera" clipfar="1000" clipnear="1" fov="69.02" locked="False" orthographic="False" position="0 100 -600" rotation="10 0 0" scaleanchor="Center" />
+				<Add ref="#Light" brightness="60" lightdiffuse="1 1 1" lighttype="Point" position="0 268.14 0" scale="1 1 1" shdwfilter="41.59" shdwmapres="11" />
+				<State id="Scene-Slide1" name="Slide1" playmode="PingPong" >
+					<Set ref="#Layer" endtime="5000" />
+					<Set ref="#Camera" endtime="5000" />
+					<Set ref="#Light" endtime="5000" />
+					<Add ref="#Vehicle" name="Vehicle" endtime="5000" pivot="25 0 0" position="50 -100 0" scale="5 5 5" sourcepath="models/vehicle/meshes/Vehicle.mesh" >
+						<AnimationTrack property="rotation.x" type="EaseInOut" >0 0 100 100 5 0 100 100</AnimationTrack>
+						<AnimationTrack property="rotation.y" type="EaseInOut" >0 0 100 100 5 180 100 100</AnimationTrack>
+						<AnimationTrack property="rotation.z" type="EaseInOut" >0 0 100 100 5 0 100 100</AnimationTrack>
+					</Add>
+					<Add ref="#Default" />
+					<Add ref="#Light2" name="Light2" endtime="5000" position="530.74 -89.2324 0" />
+					<Add ref="#Light3" name="Light3" endtime="5000" position="-509.512 12.0537 0" rotation="0 90 0" />
+					<Add ref="#wheel" name="wheel" endtime="5000" position="70 -40 0" scale="5 5 5" sourcepath="models/wheel/meshes/wheel.mesh" >
+						<AnimationTrack property="rotation.x" type="EaseInOut" >0 0 100 100 5 0 100 100</AnimationTrack>
+						<AnimationTrack property="rotation.y" type="EaseInOut" >0 0 100 100 5 1800 100 100</AnimationTrack>
+						<AnimationTrack property="rotation.z" type="EaseInOut" >0 0 100 100 5 0 100 100</AnimationTrack>
+					</Add>
+					<Add ref="#Default_004" />
+				</State>
+				<State id="Scene-Slide2" name="Slide2" playthroughto="Previous" >
+					<Set ref="#Layer" endtime="5000" />
+					<Set ref="#Camera" endtime="5000" eyeball="False" />
+					<Set ref="#Light" endtime="5000" />
+					<Add ref="#Vehicle_001" name="Vehicle" endtime="5000" position="-100 -100 0" scale="5 5 5" sourcepath="models/vehicle/meshes/Vehicle.mesh" />
+					<Add ref="#Default_001" />
+					<Add ref="#Light2_001" name="Light2" endtime="5000" position="0 160 0" />
+					<Add ref="#Light3_001" name="Light3" endtime="5000" eyeball="False" position="-509.512 -82.2724 0" rotation="0 90 0" />
+					<Add ref="#Camera2" name="Camera2" endtime="5000" >
+						<AnimationTrack property="position.x" type="EaseInOut" >0 0 100 100 5 -200 100 100</AnimationTrack>
+						<AnimationTrack property="position.y" type="EaseInOut" >0 0 100 100 5 -100 100 100</AnimationTrack>
+						<AnimationTrack property="position.z" type="EaseInOut" >0 -600 100 100 5 -300 100 100</AnimationTrack>
+					</Add>
+				</State>
+				<State id="Scene-Slide3" name="Slide3" playthroughto="Previous" >
+					<Set ref="#Layer" endtime="5000" />
+					<Set ref="#Camera" endtime="5000" eyeball="False" />
+					<Set ref="#Light" endtime="5000" />
+					<Add ref="#Vehicle_002" name="Vehicle" endtime="5000" position="-100 -100 0" scale="5 5 5" sourcepath="models/vehicle/meshes/Vehicle.mesh" />
+					<Add ref="#Default_002" />
+					<Add ref="#Light2_002" name="Light2" endtime="5000" position="0 160 0" />
+					<Add ref="#Light3_002" name="Light3" endtime="5000" eyeball="False" position="-509.512 -82.2724 0" rotation="0 90 0" />
+					<Add ref="#Camera2_001" name="Camera2" endtime="5000" eyeball="False" />
+					<Add ref="#Camera3" name="Camera3" endtime="5000" >
+						<AnimationTrack property="position.x" type="EaseInOut" >0 -200 100 100 1.965 0 100 100 5 250 100 100</AnimationTrack>
+						<AnimationTrack property="position.y" type="EaseInOut" >0 -100 100 100 1.965 0 100 100 5 -100 100 100</AnimationTrack>
+						<AnimationTrack property="position.z" type="EaseInOut" >0 -300 100 100 1.965 -600 100 100 5 -300 100 100</AnimationTrack>
+					</Add>
+				</State>
+				<State id="Scene-Slide4" name="Slide4" playthroughto="Previous" >
+					<Set ref="#Layer" endtime="5000" />
+					<Set ref="#Camera" endtime="5000" eyeball="False" />
+					<Set ref="#Light" endtime="5000" />
+					<Add ref="#Vehicle_003" name="Vehicle" endtime="5000" position="-100 -100 0" scale="5 5 5" sourcepath="models/vehicle/meshes/Vehicle.mesh" />
+					<Add ref="#Default_003" />
+					<Add ref="#Light2_003" name="Light2" endtime="5000" position="0 160 0" />
+					<Add ref="#Light3_003" name="Light3" endtime="5000" eyeball="False" position="-509.512 -82.2724 0" rotation="0 90 0" />
+					<Add ref="#Camera2_002" name="Camera2" endtime="5000" eyeball="False" />
+					<Add ref="#Camera3_001" name="Camera3" endtime="5000" eyeball="False" />
+					<Add ref="#Camera4" name="Camera4" endtime="5000" position="250 -100 -300" rotation="0 0 0" >
+						<AnimationTrack property="position.x" type="EaseInOut" >0 250 100 100 1.988 0 100 100 5 -200 100 100</AnimationTrack>
+						<AnimationTrack property="position.y" type="EaseInOut" >0 -100 100 100 1.988 300 100 100 5 -100 100 100</AnimationTrack>
+						<AnimationTrack property="position.z" type="EaseInOut" >0 -300 100 100 1.988 0 100 100 5 300 100 100</AnimationTrack>
+						<AnimationTrack property="rotation.x" type="EaseInOut" >0 0 100 100 1.981 90 100 100 5 0 100 100</AnimationTrack>
+						<AnimationTrack property="rotation.y" type="EaseInOut" >0 0 100 100 1.981 0 100 100 5 180 100 100</AnimationTrack>
+						<AnimationTrack property="rotation.z" type="EaseInOut" >0 0 100 100 1.981 0 100 100 5 0 100 100</AnimationTrack>
+					</Add>
+					<Add ref="#Light4" name="Light4" endtime="5000" lighttype="Point" position="0 0 300" />
+				</State>
+			</State>
+		</Logic>
+	</Project>
+</UIP>
